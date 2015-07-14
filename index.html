@@ -20,6 +20,30 @@
   <div id="list-goes-here"></div>
   <small>Add events to this <a href="https://docs.google.com/a/github.com/spreadsheet/ccc?key=1M_5j0mm1orF0Uog9nemOFt-08b02fQf9F4YnMeZfkhg#gid=0&output=json" target="_blank">spreadsheet</a>. Visit the GitHub <a href="http://www.github.com/jlord/sheetsee-calendar">repository</a>.</small>
 
+
+<div id="siteTable"></div>
+<input id="siteTableFilter" type="text"></input>
+<script id="tableTemplate" type="text/html">
+    <table>
+    <tr><th class="tHeader">City</th><th class="tHeader">Place Name</th><th class="tHeader">Year</th><th class="tHeader">Image</th></tr>
+      {{#rows}}
+        <tr><td>{{city}}</td><td>{{placename}}</td><td>{{year}}</td><td>{{image}}</td></tr>
+      {{/rows}}
+  </table>
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var tableOptions = {
+                          "data": ,
+                          "pagination": 10,
+                          "tableDiv": "#siteTable",
+                          "filterDiv": "#siteTableFilter",
+                          "templateID": "tableTemplate"
+                          }
+      Sheetsee.makeTable(tableOptions)
+      Sheetsee.initiateTableFilter(tableOptions)
+    })
+</script>
   </body>
     <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
@@ -32,5 +56,6 @@
       var URL = "1M_5j0mm1orF0Uog9nemOFt-08b02fQf9F4YnMeZfkhg"
       Tabletop.init( { key: URL, callback: generateList, simpleSheet: true } )
     })
+    
   </script>
 </html>
