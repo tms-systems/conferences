@@ -13,6 +13,12 @@ function generateList (eventData) {
   $('#' + formattedDate(today)).removeClass('no-event').addClass('today')		
   addMonthMenu()		
 }		
+function addMonthMenu() {		
+  $('#list-goes-here').prepend('<div id="cal-controls">')		
+  $('.month-table').each(function(_, table) {		
+    var month = $(table).data('month')		
+    $('#cal-controls').append('<a class="month-menuitem" data-target="' + month + '" href="#' + month + '">' + month + '</a>')		
+  })		
 
   $(document).on('click', '.month-menuitem', function(e) {
     $('[data-month]').hide()
