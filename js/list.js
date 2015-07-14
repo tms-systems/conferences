@@ -15,7 +15,7 @@ function generateList (eventData) {
 }		
 function addMonthMenu() {		
   $('#list-goes-here').prepend('<div id="cal-controls">')		
-  $('.month-table').each(function(_, table) {		
+  $('.big-table').each(function(_, table) {		
     var month = $(table).data('month')		
     $('#cal-controls').append('<a class="month-menuitem" data-target="' + month + '" href="#' + month + '">' + month + '</a>')		
   })		
