@@ -1,5 +1,5 @@
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-var weekdays   = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+var weekdays   = ["M", "T", "W", "T", "F", "S", "S"]
 var today  = new Date()
 var months = []
 
