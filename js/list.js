@@ -10,11 +10,6 @@ function generateList (eventData) {
     appendEvent(event)
   })
 
-  // Highlight today
-  $('#' + formattedDate(today)).removeClass('no-event').addClass('today')
-  addMonthMenu()
-}
-
 function addMonthMenu() {
   $('#list-goes-here').prepend('<div id="cal-controls">')
   $('.month-table').each(function(_, table) {
