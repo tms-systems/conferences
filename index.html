@@ -23,7 +23,23 @@
     <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
       var URL = "1M_5j0mm1orF0Uog9nemOFt-08b02fQf9F4YnMeZfkhg"
-      Tabletop.init( { key: URL, callback: generateCalendar, simpleSheet: true } )
+      Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
     })
+    function showInfo(data) {
+    var tableOptions = {"data": data
+    , "pagination": 10, "tableDiv": "#fullTable", "filterDiv": "#fullTableFilter"}
+    Sheetsee.makeTable(tableOptions)
+    Sheetsee.initiateTableFilter(tableOptions)
+    var california = Sheetsee.getKeyword(data, "california")
+    var calOptions = { "data": california,
+                       "pagination": 5,
+                       "tableDiv": "#calTable",
+                       "filterDiv": "#calFilter"
+                     }
+    Sheetsee.makeTable(calOptions)
+    Sheetsee.initiateTableFilter(calOptions)
+    var html = Sheetsee.ich.photogrid({'rows': data})
+    $('#photogrid').html(html)
+  }
   </script>
 </html>
