@@ -15,7 +15,7 @@ function generateCalendar (eventData) {
   addMonthMenu()
 }
 
-function addMonthMenu() {
+function addMonthMenu(event) {
   $('#calendar-goes-here').prepend('<div id="cal-controls">').prepend('<div id="agenda">')
   $('.month-table').each(function(_, table) {
     var month = $(table).data('month')
