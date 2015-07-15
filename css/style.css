@@ -7,6 +7,9 @@ body {
 }
 
 * { -webkit-box-sizing: border-box; }
+#calendar-goes-here {
+  float: left;
+}
 .results {
   float: left;
 }
