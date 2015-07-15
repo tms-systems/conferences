@@ -7,7 +7,9 @@ body {
 }
 
 * { -webkit-box-sizing: border-box; }
-
+#calendar-goes-here {
+  float: left;
+}
 .results td {
   padding: 15px;
   border:1px solid #000;
