@@ -8,6 +8,11 @@ body {
 
 * { -webkit-box-sizing: border-box; }
 
+td {
+  padding: 15px;
+  border:1px solid #000;
+}
+
 .month-table {
   border: 1px solid #ccefff;
   padding: 10px;
