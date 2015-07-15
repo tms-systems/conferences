@@ -9,6 +9,10 @@ body {
 * { -webkit-box-sizing: border-box; }
 #calendar-goes-here {
   float: left;
+  margin-right:20px;
+}
+.results {
+  padding-top:140px;
 }
 .results td {
   padding: 15px;
