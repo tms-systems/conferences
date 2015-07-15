@@ -1,5 +1,5 @@
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-var weekdays   = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+var weekdays   = ["M", "T", "W", "T", "F", "S", "S"]
 var today  = new Date()
 var months = []
 
@@ -9,6 +9,10 @@ function generateCalendar (eventData) {
   eventData.forEach(function (event) {
     appendEvent(event)
   })
+
+  // Highlight today
+  $('#' + formattedDate(today)).removeClass('no-event').addClass('today')
+  addMonthMenu()
 }
 
 function addMonthMenu() {
@@ -61,7 +65,7 @@ function appendEvent( event ) {
         dateElement.append('<div class="event spacer">&nbsp;</div>')
       })
 
-      //dateElement.removeClass('no-event').append('<div class="event multi-days following-days" title="' + event.name + '"><a target="_blank" href="' + event.tickets + '">' + event.name + '</a></div>')
+      dateElement.removeClass('no-event').append('<div class="event multi-days following-days" title="' + event.name + '"><a target="_blank" href="' + event.tickets + '">' + event.name + '</a></div>')
     }
   }
 
