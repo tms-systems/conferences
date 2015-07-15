@@ -19,9 +19,7 @@ function addMonthMenu() {
   $('#calendar-goes-here').prepend('<div id="cal-controls">').prepend('<div id="agenda">')
   $('.month-table').each(function(_, table) {
     var month = $(table).data('month')
-    var name =$(table).data('name')
     $('#cal-controls').append('<a class="month-menuitem" data-target="' + month + '" href="#' + month + '">' + month + '</a>')
-    $('#agenda').append('<div class="agenda-rows">' + name + '</div>')
   })
 
   $(document).on('click', '.month-menuitem', function(e) {
@@ -70,8 +68,8 @@ function appendEvent( event ) {
       dateElement.removeClass('no-event').append('<div class="event multi-days following-days" title="' + event.name + '"><a target="_blank" href="' + event.tickets + '">' + event.name + '</a></div>')
     }
   }
-
-  $('#' + formattedDate(eventStartDate)).removeClass('no-event').append(eventElement)
+  $('#agenda').append(eventElement)
+  $('#' + formattedDate(eventStartDate)).removeClass('no-event')
 }
 
 function generateAllTheMonths( eventData ) {
