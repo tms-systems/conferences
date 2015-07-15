@@ -20,6 +20,8 @@ function addMonthMenu() {
   $('.month-table').each(function(_, table) {
     var month = $(table).data('month')
     $('#cal-controls').append('<a class="month-menuitem" data-target="' + month + '" href="#' + month + '">' + month + '</a>')
+    $('#agenda').append('<div>Hey</div>')
+
   })
 
   $(document).on('click', '.month-menuitem', function(e) {
@@ -68,7 +70,6 @@ function appendEvent( event ) {
       dateElement.removeClass('no-event').append('<div class="event multi-days following-days" title="' + event.name + '"><a target="_blank" href="' + event.tickets + '">' + event.name + '</a></div>')
     }
   }
-  $('#agenda').append(eventElement)
   $('#' + formattedDate(eventStartDate)).removeClass('no-event')
 }
 
