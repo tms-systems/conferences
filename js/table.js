@@ -15,12 +15,13 @@ function generateCalendar (eventData) {
   addMonthMenu()
 }
 
-function addMonthMenu(event) {
+function addMonthMenu() {
   $('#calendar-goes-here').prepend('<div id="cal-controls">').prepend('<div id="agenda">')
   $('.month-table').each(function(_, table) {
     var month = $(table).data('month')
+    var name =$(table).data('name')
     $('#cal-controls').append('<a class="month-menuitem" data-target="' + month + '" href="#' + month + '">' + month + '</a>')
-    $('#agenda').append('<div class="agenda-rows">' + event.name + '</div>')
+    $('#agenda').append('<div class="agenda-rows">' + name + '</div>')
   })
 
   $(document).on('click', '.month-menuitem', function(e) {
