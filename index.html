@@ -16,9 +16,9 @@
 
   <h1>NodeSchool Events</h1>
   
+  <div id="calendar-goes-here"></div>
   <div class="results"></div> 
   
-  <div id="calendar-goes-here"></div>
   <small>Add events to this <a href="https://docs.google.com/a/github.com/spreadsheet/ccc?key=0AuOjlXjUrSbAdE1XRFJkeEJZQ1NSelhILUR0NXdBWUE#gid=0&output=json" target="_blank">spreadsheet</a>. Visit the GitHub <a href="http://www.github.com/jlord/sheetsee-calendar">repository</a>.</small>
 <table>
 <script>
@@ -35,7 +35,7 @@
  
   $(entry).each(function(){
     // Column names are name, age, etc.
-    $('.results').prepend('<tr><td>'+this.gsx$name.$t+'</td><td>'+this.gsx$contact.$t+'</td></tr>');
+    $('.results').prepend('<tr><td></td>'+this.gsx$StartDate.$t+'<td>'+this.gsx$name.$t+'</td><td>'+this.gsx$contact.$t+'</td></tr>');
   });
  
  });
