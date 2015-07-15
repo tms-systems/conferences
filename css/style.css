@@ -39,10 +39,6 @@ a {
   border-bottom: 2px #CCF4FF solid;
 }
 
-a:hover {
-  color: #47CCFC;
-}
-
 td {
   vertical-align: top;
 }
