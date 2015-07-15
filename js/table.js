@@ -47,7 +47,7 @@ function appendEvent( event ) {
   if ( eventEndDate.getDate() ) {
     var date         = eventStartDate
     var spacerNumber = $('#' + formattedDate(eventStartDate)).find('.event').length
-    eventElement.addClass('multi-days')
+    eventElement.addClass('multi-days').css('borderColor', 'blue')
 
     while ( eventEndDate > date ) {
       // If reached end of month, go to first day of the next month
