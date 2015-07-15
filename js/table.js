@@ -69,7 +69,6 @@ function appendEvent( event ) {
     }
   }
   $('#' + formattedDate(eventStartDate)).removeClass('no-event')
-  $('#agenda').append('<div>' + event.name + '</div>')
 }
 
 function generateAllTheMonths( eventData ) {
