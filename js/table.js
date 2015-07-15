@@ -47,7 +47,7 @@ function appendEvent( event ) {
   if ( eventEndDate.getDate() ) {
     var date         = eventStartDate
     var spacerNumber = $('#' + formattedDate(eventStartDate)).find('.event').length
-    eventElement.addClass('multi-days')
+    eventElement.addClass('multi-days').css('borderColor', + event.hexcolor + )
 
     while ( eventEndDate > date ) {
       // If reached end of month, go to first day of the next month
@@ -65,7 +65,7 @@ function appendEvent( event ) {
         dateElement.append('<div class="event spacer">&nbsp;</div>')
       })
 
-      dateElement.removeClass('no-event').append('<div class="event multi-days following-days" style="border-bottom:3px solid ' + event.hexcolor + '"><a target="_blank" href="' + event.tickets + '"></a></div>')
+      dateElement.removeClass('no-event').append('<div class="event multi-days following-days" style="border-color: ' + event.hexcolor + '"><a target="_blank" href="' + event.tickets + '"></a></div>')
     }
   }
 
