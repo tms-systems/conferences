@@ -20,7 +20,6 @@ function addMonthMenu() {
   $('.month-table').each(function(_, table) {
     var month = $(table).data('month')
     $('#cal-controls').append('<a class="month-menuitem" data-target="' + month + '" href="#' + month + '">' + month + '</a>')
-    $('#agenda').append('<div>oof</div>')
   })
 
   $(document).on('click', '.month-menuitem', function(e) {
