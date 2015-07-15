@@ -65,7 +65,7 @@ function appendEvent( event ) {
         dateElement.append('<div class="event spacer">&nbsp;</div>')
       })
 
-      dateElement.removeClass('no-event').append('<div class="event multi-days following-days" style="border:3px solid ' + event.hexcolor + '"><a target="_blank" href="' + event.tickets + '"></a></div>')
+      dateElement.removeClass('no-event').append('<div class="event multi-days following-days" style="border-bottom:3px solid ' + event.hexcolor + '"><a target="_blank" href="' + event.tickets + '"></a></div>')
     }
   }
 
