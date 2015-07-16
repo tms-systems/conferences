@@ -72,7 +72,7 @@ function generateMonthTable( date ) {
   var eventMonthName = monthNames[date.getMonth()]
   var monthTable     = $('<table cellspacing=0 class="month-table" data-month="' + date.getFullYear() + "-"  + eventMonthName + '" id="month-' + date.getMonth() + '"></table>')
   var agendaTable     = $('<table cellspacing=0 class="agenda-table" data-month="' + date.getFullYear() + "-"  + eventMonthName + '" id="month-' + date.getMonth() + '"></table>')
-  var monthTableBody = monthTable.append('<>')
+  var monthTableBody = monthTable.append('<tbody>')
   // var today          = new Date()
   var endOfToday     = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 00, 00, 00)
   var firstDay       = new Date(date.getFullYear(), date.getMonth(), 1)
@@ -83,7 +83,7 @@ function generateMonthTable( date ) {
   monthTable.before('<h2 data-month="' + date.getFullYear() + '-' + eventMonthName + '">' + eventMonthName + ' ' + date.getFullYear() + '</h2>')
   
   $('#calendar-goes-here').append(agendaTable)
-  //agendaTable.append('')
+  agendaTable.append('<tbody></tbody>')
   
   
   // Add month calendar header
