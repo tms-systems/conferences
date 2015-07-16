@@ -83,22 +83,7 @@ function generateMonthTable( date ) {
   monthTable.before('<h2 data-month="' + date.getFullYear() + '-' + eventMonthName + '">' + eventMonthName + ' ' + date.getFullYear() + '</h2>')
   
   $('#calendar-goes-here').append(agendaTable)
-  agendaTable.append('<tbody><tr><td>' // ID of the Google Spreadsheet
- var spreadsheetID = "1M_5j0mm1orF0Uog9nemOFt-08b02fQf9F4YnMeZfkhg";
- 
- // Make sure it is public or set to Anyone with link can view 
- var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
- 
- $.getJSON(url, function(data) {
- 
-  var entry = data.feed.entry;
- 
-  $(entry).each(function(){
-    // Column names are name, age, etc.
-    $('.results').prepend('<tr><td style="font-weight: bold; color: '+this.gsx$hexcolor.$t+'">'+this.gsx$startdate.$t+'-'+this.gsx$enddate.$t+'</td><td>'+this.gsx$name.$t+'</td><td>'+this.gsx$location.$t+'</td><td>'+this.gsx$contact.$t+'</td></tr>');
-  });
- 
- });'</td></tr></tbody>')
+  agendaTable.append('<tbody><tr><td>'+ event.hexcolor + '</td></tr></tbody>')
   
   
   // Add month calendar header
