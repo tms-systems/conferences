@@ -83,7 +83,7 @@ function generateMonthTable( date ) {
   monthTable.before('<h2 data-month="' + date.getFullYear() + '-' + eventMonthName + '">' + eventMonthName + ' ' + date.getFullYear() + '</h2>')
   
   $('#calendar-goes-here').append(agendaTable)
-  agendaTable.append('<tbody>').append(agendaTable).append('</tbody>')
+  agendaTable.append('<tbody>').append('<td>' + weekdays[i] + '</td>').append('</tbody>')
   
   
   // Add month calendar header
