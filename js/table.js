@@ -8,6 +8,7 @@ function generateCalendar (eventData) {
   generateAllTheMonths(eventData)
   eventData.forEach(function (event) {
     appendEvent(event)
+    appendEvent(event)
   })
 
   // Highlight today
